@@ -1,14 +1,11 @@
 class SoundCloudRepresenter < Napa::Representer
   # include Representable::JSON
 
-  property :source, default: 'Soundcloud'
-  property :id, as: :source_id
+  property :source, type: String
+  property :source_id, type: Integer
   property :title, type: String
-  property :artwork_url, as: :artwork, type: String
-  property :user, as: :artists do
-    default: :username
-  end
-  # property ['user']['username'], as: :artists, type: String
-  property :album, default: nil
+  property :artwork, type: String
+  property :artists, type: Array
+  property :album
   property :duration, type: Integer
 end

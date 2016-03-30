@@ -4,6 +4,8 @@ class ApplicationApi < Grape::API
 
   mount HelloApi => '/'
   mount SoundCloudApi => '/'
+  mount SpotifyApi => '/'
+  mount SearchApi => '/'
 
   add_swagger_documentation
 end
